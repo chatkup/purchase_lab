@@ -5,13 +5,22 @@
 </ion-header>
 
 <ion-content padding class="home">
-  <h2>Welcome to Ionic!</h2>
+  <h2>โปรแกรมบริหารสัญญา</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    สำหรับบันทึกข้อมูลการจัดซื้อตามสัญญาประกวดราคาวัสดุวิทยาศาสตร์การแพทย์ โรงพยาบาลชุมชน จังหวัดอุบลราชธานี
   </p>
-  <p>
-    Take a look at the <code>app/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-list>
+    <ion-list-header>เข้าสู่ระบบ</ion-list-header>
+    <ion-item>
+      <ion-label primary floating>User Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label primary floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <button (click)="go2contractPage()">Log in</button>
+  </ion-list>
+
 </ion-content>
