@@ -15,12 +15,24 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-list-header>
-      Chem
-    </ion-list-header>
-    <ion-item>123/59 (S)</ion-item>
-    <ion-item>124/59 (M)</ion-item>
-    <ion-item>125/59 (L)</ion-item>
-    <ion-item>126/59 (XL)</ion-item>
+    <ion-item>
+      <ion-label>เลือกชนิดน้ำยา</ion-label>
+      <ion-select [(ng-model)]="lnmain" (ionChange)="getsubmain()">
+      <ion-option *ngFor="let d of main" [value]="d.id">
+          {{d.name}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>เลือกสัญญา</ion-label>
+      <ion-select [(ng-model)]="lnsubmain">
+        <ion-option *ngFor="let d of allsubmain" [value]="d.id">
+          {{d.name}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <button (click)="showselected()">แสดงสัญญา</button>
+    </ion-item>
   </ion-list>
 </ion-content>
