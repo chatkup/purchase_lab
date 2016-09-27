@@ -14,7 +14,6 @@ export class ContractListPage {
   main: any[]
   submain: any[]
   allsubmain: any[]
-  contract: any[]
   lnmain: number
   lnsubmain: number
 
@@ -31,10 +30,6 @@ export class ContractListPage {
       { id: 2, mainId: 1, name: 'M' },
       { id: 3, mainId: 1, name: 'L' },
       { id: 4, mainId: 1, name: 'XL' },
-      { id: 5, mainId: 2, name: 'S' },
-      { id: 6, mainId: 2, name: 'M' },
-      { id: 7, mainId: 2, name: 'L' },
-      { id: 8, mainId: 2, name: 'XL' },
     ]
   }
 
@@ -51,5 +46,8 @@ export class ContractListPage {
   showselected() {
     console.log(this.lnmain)
     console.log(this.lnsubmain)
+    var x = this.lnmain
+    var y = this.lnsubmain
+    alert('var is '+x+'and'+y)
   }
 }

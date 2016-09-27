@@ -17,22 +17,22 @@
   <ion-list>
     <ion-item>
       <ion-label>เลือกชนิดน้ำยา</ion-label>
-      <ion-select [(ng-model)]="lnmain" (ionChange)="getsubmain()">
-      <ion-option *ngFor="let d of main" [value]="d.id">
+      <ion-select [(ngModel)]='lnmain' (ionChange)='getsubmain()'>
+      <ion-option *ngFor='let d of main' [value]="d.id">
           {{d.name}}
         </ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>เลือกสัญญา</ion-label>
-      <ion-select [(ng-model)]="lnsubmain">
-        <ion-option *ngFor="let d of allsubmain" [value]="d.id">
+      <ion-select [(ngModel)]='lnsubmain'>
+        <ion-option *ngFor='let d of allsubmain' [value]='d.id'>
           {{d.name}}
         </ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <button (click)="showselected()">แสดงสัญญา</button>
+      <button (click)='showselected()'>แสดงสัญญา</button>
     </ion-item>
   </ion-list>
 </ion-content>
